@@ -2,7 +2,7 @@ language: scala
 
 scala:
   - 2.11.12
-  - 2.12.4
+  - 2.12.6
   - 2.13.0-M4
 
 script:
@@ -10,7 +10,14 @@ script:
 
 jdk:
   - oraclejdk8
-  - oraclejdk9
+  - openjdk11
+
+matrix:
+  exclude:
+    - jdk: openjdk11
+      scala: 2.11.12
+    - jdk: openjdk11
+      scala: 2.12.6
 
 before_cache:
   - find $HOME/.sbt -name "*.lock" | xargs rm
