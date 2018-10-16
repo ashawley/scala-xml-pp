@@ -2,12 +2,12 @@ name := "scala-xml-pp"
 
 version := "0.0-SNAPSHOT"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.7"
 
 crossScalaVersions := Seq(
   // "2.10.7", // Doesn't have minimizeEmpty arg to scala.xml.PrettyPrinter
   "2.11.12",
-  "2.12.6",
+  "2.12.7",
   "2.13.0-M4"
 )
 
