@@ -7,7 +7,7 @@ scalaVersion := "2.12.7"
 crossScalaVersions := Seq(
   // "2.10.7", // Doesn't have minimizeEmpty arg to scala.xml.PrettyPrinter
   "2.11.12",
-  "2.12.7",
+  "2.12.8",
   "2.13.0-M5"
 )
 
