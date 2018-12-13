@@ -66,9 +66,9 @@ object Main {
           formatFile(prettyPrinter, file)
           Console.println(s"Formatted ${file.getPath}")
         }
-        scala.sys.exit(0)
+        () // scala.sys.exit(0)
       case None =>
-        scala.sys.exit(-1)
+        () // scala.sys.exit(-1)
     }
   }
 
@@ -76,7 +76,7 @@ object Main {
     val xml = scala.xml.XML.loadFile(file)
     val fileWriter = new java.io.PrintWriter(file)
     // scala.xml.XML.save(file.getPath, xml)
-    prettyPrinter.format(xml).lines.foreach(fileWriter.println)
+    prettyPrinter.format(xml).linesIterator.foreach(fileWriter.println)
     fileWriter.close()
   }
 
