@@ -8,7 +8,7 @@ crossScalaVersions := Seq(
   // "2.10.7", // Doesn't have minimizeEmpty arg to scala.xml.PrettyPrinter
   "2.11.12",
   "2.12.7",
-  "2.13.0-M4"
+  "2.13.0-M5"
 )
 
 scalacOptions ++= {
@@ -89,7 +89,7 @@ scalacOptions ++= {
 }
 
 libraryDependencies +=
-  "com.github.scopt" %% "scopt" % "3.7.0"
+  "com.github.scopt" %% "scopt" % "3.7.1"
 
 libraryDependencies ++= {
   CrossVersion.partialVersion(scalaVersion.value) match {
